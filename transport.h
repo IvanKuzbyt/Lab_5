@@ -11,7 +11,7 @@ class transport {
 
 public:
     transport();
-    virtual ~transport();
+    ~transport();
 
     void setType_fuel(const std::string& type_fuel);
     void setMark_transport(const std::string& mark_transport);
@@ -24,25 +24,25 @@ protected:
 class road_transport : virtual public transport {
 public:
     road_transport();
-    virtual ~road_transport();
+    ~road_transport();
 };
 
 class water_transport : virtual public transport {
 public:
     water_transport();
-    virtual ~water_transport();
+    ~water_transport();
 };
 
 class air_transport : virtual public transport {
 public:
     air_transport();
-    virtual ~air_transport();
+    ~air_transport();
 };
 
 class hybrid_vehicle : public road_transport, public water_transport, public air_transport {
 public:
     hybrid_vehicle();
-    virtual ~hybrid_vehicle();
+    ~hybrid_vehicle();
 };
 
 #endif
